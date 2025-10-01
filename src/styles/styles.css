@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to right, #ffe0ec, #fcd3e1);
+  color: #5a2a50;
+  text-align: center;
+  min-height: 100vh;
+
+  display: flex;              /* Usa flexbox */
+  justify-content: center;    /* Centra horizontal */
+  align-items: center;        /* Centra vertical */
+}
+
+.app {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;     /* Ya no hace falta margen arriba/abajo */
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #c71585;
+}
+
+.carousel-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.swiper {
+  padding-bottom: 2rem; /* espacio para los dots de navegación */
+}
+
+/* Cada slide solo centra su contenido */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo de las tarjetas */
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.card h2 {
+  color: #d63384;
+  margin-bottom: 1rem;
+  font-family: 'Pacifico', cursive;
+}
+
+.card p {
+  line-height: 1.6;
+  font-size: 1rem;
+  max-height: 300px;     /* límite de altura */
+  overflow-y: auto;      /* scroll si se pasa */
+  padding-right: 4px;    /* espacio para el scroll */
+}
+
+/* Scroll personalizado dentro de los textos */
+.card p::-webkit-scrollbar {
+  width: 8px;               /* ancho de la barra */
+}
+
+.card p::-webkit-scrollbar-track {
+  background: #ffe4ec;       /* color del fondo */
+  border-radius: 10px;
+}
+
+.card p::-webkit-scrollbar-thumb {
+  background: #f48fb1;       /* color de la barra */
+  border-radius: 10px;
+}
+
+.card p::-webkit-scrollbar-thumb:hover {
+  background: #ec407a;       /* más oscuro al pasar el mouse */
+}
+
+/* Para Firefox */
+.card p {
+  scrollbar-width: thin;           /* delgada */
+  scrollbar-color: #f48fb1 #ffe4ec; /* thumb | track */
+}
+
+.footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #a0527c;
+}
+
+.yt-audio-button {
+  padding: 12px 24px;
+  background-color: #c71585; /* Rosa fuerte */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.yt-audio-button:hover {
+  background-color: #d63384; /* Rosa más claro */
+  transform: scale(1.05);
+}
+
+.card-img {
+  width: 100%;
+  max-height: 220px;   /* Ajusta el alto máximo */
+  object-fit: contain; /* Evita cortar caras */
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  background-color: #fce4ec; /* Relleno suave si sobra espacio */
+  padding: 4px;
+}
