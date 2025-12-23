@@ -15,15 +15,17 @@ const YouTubeAudioPlayer = () => {
       playerRef.current = new window.YT.Player("yt-player", {
         height: "0",
         width: "0",
-        videoId: "OTMQJ656r-M", // <-- tu ID de video
+        videoId: "Il0S8BoucSA", // <-- tu ID de video
         playerVars: {
-          autoplay: 0,
+          autoplay: 1,
           loop: 1,
-          playlist: "OTMQJ656r-M", // necesario para loop
+          playlist: "Il0S8BoucSA", // necesario para loop
         },
         events: {
           onReady: (event) => {
             console.log("YouTube Player listo");
+            event.target.playVideo();
+            setIsPlaying(true);
           },
         },
       });
